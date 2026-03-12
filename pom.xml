@@ -6,11 +6,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.smartrecipe</groupId>
-    <artifactId>smart-recipe-app</artifactId>
+    <artifactId>PlanYaChop</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>Smart Recipe App</name>
+    <name>PlanYaChop</name>
     <description>A smart recipe management application with AI integration</description>
 
     <parent>
@@ -60,9 +60,8 @@
         </dependency>
         
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
 

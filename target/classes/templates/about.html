@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - PlanYaChop AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body class="landing-page">
+    <nav class="landing-nav">
+        <div class="container landing-nav-inner">
+            <a class="landing-brand" href="/">
+                <span class="brand-icon"><i class="fas fa-carrot"></i></span>
+                <span class="brand-text">PlanYaChop <em>AI</em></span>
+            </a>
+            <ul class="landing-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a class="active" href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <a href="/login" class="landing-login-btn">Login</a>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <h1>About PlanYaChop AI</h1>
+        <p class="lead">PlanYaChop helps users discover recipes, plan meals, and simplify kitchen prep with AI-powered workflows.</p>
+        <p>Use the dashboard after sign-up to access core planning and recipe tools.</p>
+    </main>
+
+    <div class="page-avatar-layer" aria-hidden="true">
+        <div class="avatar-shell avatar-shell-left">
+            <img class="dynamic-portrait" data-img-a="/images/female.jpeg" data-img-b="/images/male.jpeg" src="/images/female.jpeg" alt="Portrait rotation">
+        </div>
+        <div class="avatar-shell avatar-shell-right">
+            <img class="dynamic-portrait" data-img-a="/images/male.jpeg" data-img-b="/images/female.jpeg" src="/images/male.jpeg" alt="Portrait rotation">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/avatar-rotator.js}"></script>
+</body>
+</html>

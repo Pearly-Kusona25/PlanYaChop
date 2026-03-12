@@ -5,6 +5,7 @@ class AuthService {
         this.baseURL = '/api/auth';
         this.token = localStorage.getItem('token');
         this.refreshToken = localStorage.getItem('refreshToken');
+        this.user = this.getStoredUser();
     }
 
     async login(credentials) {
@@ -21,10 +22,11 @@ class AuthService {
             const data = await response.json();
 
             if (response.ok) {
-                this.setTokens(data.token, data.refreshToken);
+                this.setSession(data);
                 this.showAlert('Login successful! Redirecting...', 'success');
+                const target = data.role === 'ADMIN' ? '/admin' : '/dashboard';
                 setTimeout(() => {
-                    window.location.href = '/dashboard';
+                    window.location.href = target;
                 }, 1500);
             } else {
                 this.showAlert(data.message || 'Login failed', 'error');
@@ -51,7 +53,7 @@ class AuthService {
             const data = await response.json();
 
             if (response.ok) {
-                this.setTokens(data.token, data.refreshToken);
+                this.setSession(data);
                 this.showAlert('Registration successful! Redirecting...', 'success');
                 setTimeout(() => {
                     window.location.href = '/dashboard';
@@ -80,7 +82,7 @@ class AuthService {
         } catch (error) {
             console.error('Logout error:', error);
         } finally {
-            this.clearTokens();
+            this.clearSession();
             window.location.href = '/login';
         }
     }
@@ -100,17 +102,31 @@ class AuthService {
 
             if (response.ok) {
                 const data = await response.json();
-                this.setTokens(data.token, data.refreshToken);
+                this.setSession(data);
                 return data.token;
             } else {
                 throw new Error('Token refresh failed');
             }
         } catch (error) {
             console.error('Token refresh error:', error);
-            this.clearTokens();
+            this.clearSession();
             window.location.href = '/login';
             return null;
         }
+    }
+
+    setSession(data) {
+        this.setTokens(data.token, data.refreshToken);
+        const userData = {
+            id: data.id,
+            username: data.username,
+            email: data.email,
+            firstName: data.firstName,
+            lastName: data.lastName,
+            role: data.role
+        };
+        localStorage.setItem('user', JSON.stringify(userData));
+        this.user = userData;
     }
 
     setTokens(token, refreshToken) {
@@ -118,21 +134,49 @@ class AuthService {
         localStorage.setItem('refreshToken', refreshToken);
         this.token = token;
         this.refreshToken = refreshToken;
+        this.setAuthCookie(token);
     }
 
-    clearTokens() {
+    clearSession() {
         localStorage.removeItem('token');
         localStorage.removeItem('refreshToken');
+        localStorage.removeItem('user');
         this.token = null;
         this.refreshToken = null;
+        this.user = null;
+        this.clearAuthCookie();
     }
 
     isAuthenticated() {
         return !!this.token;
     }
 
+    getStoredUser() {
+        try {
+            const raw = localStorage.getItem('user');
+            return raw ? JSON.parse(raw) : null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    getUserRole() {
+        return this.user?.role || null;
+    }
+
     getAuthHeader() {
         return this.token ? `Bearer ${this.token}` : null;
+    }
+
+    setAuthCookie(token) {
+        if (!token) return;
+        const secureFlag = window.location.protocol === 'https:' ? '; Secure' : '';
+        document.cookie = `AUTH_TOKEN=${token}; Path=/; SameSite=Lax${secureFlag}`;
+    }
+
+    clearAuthCookie() {
+        const secureFlag = window.location.protocol === 'https:' ? '; Secure' : '';
+        document.cookie = `AUTH_TOKEN=; Max-Age=0; Path=/; SameSite=Lax${secureFlag}`;
     }
 
     showLoading() {
@@ -282,11 +326,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Check authentication on page load
-    if (!authService.isAuthenticated() && 
-        !window.location.pathname.includes('/login') && 
-        !window.location.pathname.includes('/register') &&
-        window.location.pathname !== '/') {
-        window.location.href = '/login';
+    const path = window.location.pathname;
+    const publicPaths = ['/', '/login', '/register', '/about', '/contact'];
+    const isStaticAsset = path.startsWith('/css') || path.startsWith('/js') || path.startsWith('/images');
+
+    if (!authService.isAuthenticated() &&
+        !publicPaths.includes(path) &&
+        !isStaticAsset) {
+        return window.location.href = '/login';
+    }
+
+    if (path.startsWith('/admin')) {
+        if (!authService.isAuthenticated() || authService.getUserRole() !== 'ADMIN') {
+            authService.showAlert('Admin access required.', 'error');
+            window.location.href = '/login';
+        }
     }
 });
 

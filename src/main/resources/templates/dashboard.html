@@ -3,176 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - PlanYaChop</title>
+    <title>User Dashboard - PlanYaChop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <i class="fas fa-utensils me-2"></i>PlanYaChop
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dashboard">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/recipes">My Recipes</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-user me-1"></i>User
+<body class="landing-page">
+<nav class="landing-nav">
+    <div class="container landing-nav-inner">
+        <a class="landing-brand" href="/">
+            <span class="brand-icon"><i class="fas fa-carrot"></i></span>
+            <span class="brand-text">PlanYaChop <em>AI</em></span>
+        </a>
+        <ul class="landing-links">
+            <li><a href="/">Home</a></li>
+            <li><a class="active" href="/dashboard">Dashboard</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#planner">Meal Planner</a></li>
+            <li><a href="#shopping">Shopping List</a></li>
+            <li><a href="#favorites">Favorites</a></li>
+            <li><a href="#profile">Profile</a></li>
+        </ul>
+        <a href="#" class="landing-login-btn" data-action="logout">Logout</a>
+    </div>
+</nav>
+
+<main class="container py-4">
+    <div class="row mb-3">
+        <div class="col-12">
+            <h1 class="mb-1">Your Dashboard</h1>
+            <p class="text-muted">Plan meals, find recipes, and keep your shopping organized.</p>
+        </div>
+    </div>
+
+    <div class="row g-3">
+        <div class="col-lg-4">
+            <div id="recipes" class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Recommended recipes</h5>
+                    <div class="list-group list-group-flush small">
+                        <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            <span>Spicy Lentil Bowl</span><span class="badge text-bg-light">20 min</span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/profile">Profile</a></li>
-                            <li><a class="dropdown-item" href="/settings">Settings</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" data-action="logout">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Dashboard Content -->
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="mb-4">Welcome to Your Dashboard</h1>
-            </div>
-        </div>
-
-        <!-- Quick Actions -->
-        <div class="row mb-4">
-            <div class="col-md-3 mb-3">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="fas fa-plus-circle fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Create Recipe</h5>
-                        <p class="card-text">Add a new recipe manually</p>
-                        <a href="/recipes/create" class="btn btn-primary">Create</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="fas fa-magic fa-3x text-success mb-3"></i>
-                        <h5 class="card-title">Generate Recipe</h5>
-                        <p class="card-text">AI-powered recipe generation</p>
-                        <a href="/recipes/generate" class="btn btn-success">Generate</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="fas fa-calendar-alt fa-3x text-warning mb-3"></i>
-                        <h5 class="card-title">Meal Plan</h5>
-                        <p class="card-text">Plan your weekly meals</p>
-                        <a href="/meal-plan" class="btn btn-warning">Plan</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="fas fa-chart-pie fa-3x text-info mb-3"></i>
-                        <h5 class="card-title">Analytics</h5>
-                        <p class="card-text">View cooking statistics</p>
-                        <a href="/analytics" class="btn btn-info">View</a>
+                        <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            <span>Avocado Toast Stack</span><span class="badge text-bg-light">10 min</span>
+                        </a>
+                        <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            <span>Herb Chicken Tray</span><span class="badge text-bg-light">35 min</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Recent Recipes -->
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Recent Recipes</h5>
-                        <a href="/recipes" class="btn btn-sm btn-outline-primary">View All</a>
-                    </div>
-                    <div class="card-body">
-                        <div class="text-center py-5">
-                            <i class="fas fa-utensils fa-3x text-muted mb-3"></i>
-                            <p class="text-muted">No recipes yet. Start by creating your first recipe!</p>
-                            <a href="/recipes/create" class="btn btn-primary">Create First Recipe</a>
-                        </div>
-                    </div>
+        <div class="col-lg-4">
+            <div id="planner" class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Weekly meal planner</h5>
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item d-flex justify-content-between"><span>Mon</span><span>Grain bowl</span></li>
+                        <li class="list-group-item d-flex justify-content-between"><span>Tue</span><span>Veggie tacos</span></li>
+                        <li class="list-group-item d-flex justify-content-between"><span>Wed</span><span>Chicken tray bake</span></li>
+                        <li class="list-group-item d-flex justify-content-between"><span>Thu</span><span>Pasta primavera</span></li>
+                        <li class="list-group-item d-flex justify-content-between"><span>Fri</span><span>Salmon & greens</span></li>
+                    </ul>
+                    <a class="btn btn-sm btn-outline-primary mt-3">Edit plan</a>
                 </div>
             </div>
         </div>
 
-        <!-- Quick Stats -->
-        <div class="row mt-4">
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2">Total Recipes</h6>
-                        <h3 class="text-primary">0</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2">Meal Plans Created</h6>
-                        <h3 class="text-success">0</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2">Ingredients Analyzed</h6>
-                        <h3 class="text-info">0</h3>
-                    </div>
+        <div class="col-lg-4">
+            <div id="shopping" class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Generated shopping list</h5>
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Spinach (2 bags)</span>
+                            <input class="form-check-input" type="checkbox">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Chicken thighs (4)</span>
+                            <input class="form-check-input" type="checkbox">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Cherry tomatoes</span>
+                            <input class="form-check-input" type="checkbox">
+                        </li>
+                    </ul>
+                    <a class="btn btn-sm btn-outline-success mt-3">Mark selected purchased</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Smart Recipe</h5>
-                    <p>Making cooking smarter with technology</p>
+    <div class="row g-3 mt-3">
+        <div class="col-md-6">
+            <div id="ingredient-search" class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Ingredient search</h5>
+                    <form class="d-flex gap-2">
+                        <input type="text" class="form-control" placeholder="e.g. chickpeas, spinach">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                    <div class="small text-muted mt-2">Search recipes by ingredients and generate suggestions.</div>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="/about" class="text-white me-3">About</a>
-                    <a href="/contact" class="text-white me-3">Contact</a>
-                    <a href="#" class="text-white">Privacy</a>
-                </div>
-            </div>
-            <hr class="my-3">
-            <div class="text-center">
-                <p>&copy; 2024 Smart Recipe. All rights reserved.</p>
             </div>
         </div>
-    </footer>
+        <div class="col-md-6">
+            <div id="favorites" class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Favorite recipes</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge text-bg-light border">Tahini Bowl</span>
+                        <span class="badge text-bg-light border">Veggie Tacos</span>
+                        <span class="badge text-bg-light border">Sheet Pan Salmon</span>
+                    </div>
+                    <div class="small text-muted mt-2">Save favorites, rate, and comment on recipes.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script th:src="@{/js/auth.js}"></script>
-    <script>
-        // Handle logout
-        document.querySelector('[data-action="logout"]').addEventListener('click', function(e) {
+<div class="page-avatar-layer" aria-hidden="true">
+    <div class="avatar-shell avatar-shell-left">
+        <img class="dynamic-portrait" data-img-a="/images/female.jpeg" data-img-b="/images/male.jpeg" src="/images/female.jpeg" alt="Portrait rotation">
+    </div>
+    <div class="avatar-shell avatar-shell-right">
+        <img class="dynamic-portrait" data-img-a="/images/male.jpeg" data-img-b="/images/female.jpeg" src="/images/male.jpeg" alt="Portrait rotation">
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/auth.js}"></script>
+<script th:src="@{/js/dashboard.js}"></script>
+<script th:src="@{/js/avatar-rotator.js}"></script>
+<script>
+    document.querySelectorAll('[data-action=\"logout\"]').forEach(btn => {
+        btn.addEventListener('click', e => {
             e.preventDefault();
-            if (confirm('Are you sure you want to logout?')) {
-                window.authService.logout();
-            }
+            window.authService.logout();
         });
-    </script>
+    });
+</script>
 </body>
 </html>

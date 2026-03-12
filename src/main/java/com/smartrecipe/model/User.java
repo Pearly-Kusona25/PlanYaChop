@@ -17,8 +17,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "users")
-@EntityListeners(AuditingEntityListener.class)
+@Table(name = "app_users")
+@EntityListeners(value = AuditingEntityListener.class)
 public class User {
     
     @Id

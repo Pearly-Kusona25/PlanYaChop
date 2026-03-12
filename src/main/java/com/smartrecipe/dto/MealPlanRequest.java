@@ -14,7 +14,7 @@ public class MealPlanRequest {
     
     @NotNull(message = "Meals per day cannot be null")
     @Min(value = 1, message = "Meals per day must be at least 1")
-    @Max(value = 10, message = "Meals per day cannot exceed 10")
+    @Max(value = 5, message = "Meals per day cannot exceed 5")
     private Integer mealsPerDay;
     
     private List<String> dietaryRestrictions;
