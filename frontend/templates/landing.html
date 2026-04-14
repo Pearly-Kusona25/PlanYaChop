@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanYaChop AI - Smart Cooking Made Easy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body class="landing-page landing-page-v2">
+    <div class="landing-shell">
+        <nav class="landing-nav landing-nav-v2">
+            <div class="container landing-nav-inner landing-nav-inner-v2">
+                <a class="landing-brand landing-brand-v2" href="/">
+                    <span class="brand-icon brand-icon-v2"><i class="fas fa-carrot"></i></span>
+                    <span class="brand-text brand-text-v2">PlanYaChop <em>AI</em></span>
+                </a>
+                <ul class="landing-links landing-links-v2">
+                    <li><a class="active" href="/">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <div class="landing-nav-actions">
+                    <a href="/login" class="landing-login-link">Login</a>
+                    <a href="/register" class="landing-login-btn landing-login-btn-v2">Get Started</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="landing-main-v2">
+            <section class="landing-hero landing-hero-v2">
+                <div class="container hero-grid hero-grid-v2">
+                    <div class="hero-copy hero-copy-v2">
+                        <div class="hero-badge-v2"><span></span> AI meal planning for real kitchens</div>
+                        <h1>Plan meals.<br>Chop stress.<br><span>Cook smarter</span> with AI.</h1>
+                        <p>Turn ingredients, budget, and time into practical recipes, weekly plans, and shopping lists that actually fit your routine.</p>
+                        <div class="hero-actions hero-actions-v2">
+                            <a href="/register" class="btn-start btn-start-v2">Start planning</a>
+                            <a href="#how-it-works" class="btn-demo btn-demo-v2"><i class="fas fa-play-circle"></i>How it works</a>
+                        </div>
+                        <div class="hero-stats-v2">
+                            <article>
+                                <strong>1200+</strong>
+                                <span>curated recipes</span>
+                            </article>
+                            <article>
+                                <strong>7-day</strong>
+                                <span>meal plans in seconds</span>
+                            </article>
+                            <article>
+                                <strong>1 tap</strong>
+                                <span>shopping list export</span>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="hero-art hero-art-v2">
+                        <div class="planner-card">
+                            <div class="planner-card-head">
+                                <div class="planner-brand">
+                                    <span class="planner-dot"><i class="fas fa-wand-magic-sparkles"></i></span>
+                                    <div>
+                                        <strong>PlanYaChop AI</strong>
+                                        <small>Live meal planner</small>
+                                    </div>
+                                </div>
+                                <span class="planner-status">Active</span>
+                            </div>
+                            <div class="planner-chat">
+                                <div class="planner-message planner-message-user">I have rice, tomatoes, spinach, and 30 minutes.</div>
+                                <div class="planner-message planner-message-ai">
+                                    <span class="planner-tag">AI MENU READY</span>
+                                    <p>Tonight's quick plan:</p>
+                                    <ul>
+                                        <li><strong>Main:</strong> Tomato spinach jollof rice</li>
+                                        <li><strong>Side:</strong> Chili roasted plantain</li>
+                                        <li><strong>Prep:</strong> 10 min</li>
+                                        <li><strong>Cook:</strong> 20 min</li>
+                                    </ul>
+                                </div>
+                                <div class="planner-message planner-message-user">Add it to my Thursday meal plan.</div>
+                            </div>
+                            <div class="planner-card-foot">
+                                <div class="planner-input">Ask for recipes, swaps, or a weekly plan...</div>
+                                <button type="button" class="planner-send" aria-label="Send">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="trust-strip">
+                <div class="container trust-strip-inner">
+                    <span>Built for busy homes, students, and food businesses</span>
+                    <div class="trust-strip-logos">
+                        <span>Ingredient-first</span>
+                        <span>Budget-aware</span>
+                        <span>African recipe ready</span>
+                        <span>Smart grocery lists</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="landing-section">
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="section-kicker">Features</span>
+                        <h2>Everything you need to go from ingredients to a full plan.</h2>
+                        <p>PlanYaChop AI keeps the interface simple while doing the heavy lifting behind the scenes.</p>
+                    </div>
+                    <div class="feature-grid-v2 reveal-section is-visible">
+                        <article class="feature-card-v2">
+                            <div class="feature-card-icon"><i class="fas fa-carrot"></i></div>
+                            <h3>Recipe discovery from what you have</h3>
+                            <p>Paste your ingredients and get usable recipes instead of generic search results.</p>
+                        </article>
+                        <article class="feature-card-v2">
+                            <div class="feature-card-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <h3>Weekly meal plans that match your routine</h3>
+                            <p>Build breakfast, lunch, and dinner plans around schedule, budget, and prep time.</p>
+                        </article>
+                        <article class="feature-card-v2">
+                            <div class="feature-card-icon"><i class="fas fa-cart-shopping"></i></div>
+                            <h3>Automatic grocery lists</h3>
+                            <p>Convert selected recipes into a clean shopping checklist without manual counting.</p>
+                        </article>
+                        <article class="feature-card-v2">
+                            <div class="feature-card-icon"><i class="fas fa-repeat"></i></div>
+                            <h3>Ingredient swaps and substitutions</h3>
+                            <p>Get alternatives when stock runs out or when you need dietary adjustments.</p>
+                        </article>
+                        <article class="feature-card-v2">
+                            <div class="feature-card-icon"><i class="fas fa-bolt"></i></div>
+                            <h3>Fast weekday cooking</h3>
+                            <p>Prioritize recipes that fit your available time without losing flavor or variety.</p>
+                        </article>
+                        <article class="feature-card-v2">
+                            <div class="feature-card-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3>Smarter planning over time</h3>
+                            <p>Reuse saved meals and refine future plans based on the meals you actually cook.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="how-it-works" class="landing-section landing-section-dark">
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="section-kicker">How it works</span>
+                        <h2>Four steps from kitchen chaos to a clear food plan.</h2>
+                        <p>You tell the app what you have and what you need. It handles the structure.</p>
+                    </div>
+                    <div class="steps-grid-v2">
+                        <article class="step-card-v2">
+                            <span>01</span>
+                            <h3>Add ingredients or food goals</h3>
+                            <p>Start with what is already in your kitchen, or define the meals you want for the week.</p>
+                        </article>
+                        <article class="step-card-v2">
+                            <span>02</span>
+                            <h3>Let AI build the menu</h3>
+                            <p>Recipes are suggested with timing, portions, and practical combinations.</p>
+                        </article>
+                        <article class="step-card-v2">
+                            <span>03</span>
+                            <h3>Adjust for budget and schedule</h3>
+                            <p>Swap meals, cut prep time, and adapt the plan to your actual routine.</p>
+                        </article>
+                        <article class="step-card-v2">
+                            <span>04</span>
+                            <h3>Cook and shop with less friction</h3>
+                            <p>Use the generated list and recipe steps to move straight into execution.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="landing-section">
+                <div class="container cta-panel-v2">
+                    <div>
+                        <span class="section-kicker">Start free</span>
+                        <h2>Build your next meal plan in minutes.</h2>
+                        <p>Create an account to save recipes, generate weekly menus, and keep your shopping organized.</p>
+                    </div>
+                    <div class="cta-panel-actions">
+                        <a href="/register" class="btn-start btn-start-v2">Create account</a>
+                        <a href="/login" class="btn-demo btn-demo-v2">Sign in</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/main.js}"></script>
+</body>
+</html>
