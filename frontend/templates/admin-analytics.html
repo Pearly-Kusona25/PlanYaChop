@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Analytics - PlanYaChop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body class="landing-page landing-page-v2 platform-page admin-v3">
+<div class="landing-shell">
+    <nav class="landing-nav landing-nav-v2">
+        <div class="container landing-nav-inner landing-nav-inner-v2 platform-nav-inner">
+            <a class="landing-brand landing-brand-v2" href="/admin"><span class="brand-icon brand-icon-v2"><i class="fas fa-carrot"></i></span><span class="brand-text brand-text-v2">PlanYaChop <em>AI</em></span></a>
+            <ul class="landing-links landing-links-v2 platform-links"><li><a href="/admin">Capabilities</a></li><li><a class="active" href="/admin/analytics">Analytics</a></li></ul>
+            <a href="#" class="landing-login-btn landing-login-btn-v2" data-action="logout">Logout</a>
+        </div>
+    </nav>
+    <main class="landing-main-v2 platform-main">
+        <section class="landing-section platform-hero admin-hero-v3"><div class="container"><div class="platform-intro"><span class="section-kicker">Analytics</span><h1>Meal plan usage and moderation queue.</h1></div></div></section>
+        <section class="landing-section pt-0">
+            <div class="container">
+                <section class="admin-metrics-grid-v3 mb-4">
+                    <article class="platform-card"><h5>Total users</h5><h2 id="metricTotalUsers" th:text="${totalUsers}">0</h2></article>
+                    <article class="platform-card"><h5>Total recipes</h5><h2 id="metricTotalRecipes" th:text="${totalRecipes}">0</h2></article>
+                    <article class="platform-card"><h5>Meal plans requested</h5><h2 id="metricMealPlans" th:text="${activeMealPlans}">0</h2></article>
+                    <article class="platform-card"><h5>System health</h5><h2 id="metricSystemHealth">Good</h2></article>
+                </section>
+                <section class="platform-action-grid">
+                    <article class="platform-card" id="adminMealUsageSection"><div class="admin-panel-head"><h5>Meal Plan Usage</h5></div><ul id="mealPlanUsageList" class="admin-activity-list-v3"></ul><p id="mealPlanUsageEmpty" class="text-muted small mb-0">No meal plan usage data yet.</p></article>
+                    <article class="platform-card" id="adminModerationSection"><div class="admin-panel-head"><h5>Ratings & Comments Moderation</h5></div><ul id="moderationList" class="admin-activity-list-v3"></ul><p id="moderationEmpty" class="text-muted small mb-0">No moderation items yet.</p></article>
+                </section>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/theme.js}"></script>
+<script th:src="@{/js/auth.js}"></script>
+<script th:src="@{/js/admin-dashboard.js}"></script>
+<script>document.querySelectorAll('[data-action="logout"]').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();window.authService.logout();}));</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - PlanYaChop AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body class="signin-page">
+    <nav class="signin-nav">
+        <div class="container signin-nav-inner">
+            <a class="signin-brand" href="/">
+                <span class="brand-icon"><i class="fas fa-carrot"></i></span>
+                <span class="brand-text">PlanYaChop <em>AI</em></span>
+            </a>
+            <a href="/register" class="signin-contact">Create account</a>
+        </div>
+    </nav>
+
+    <main class="signin-main">
+        <section class="signin-hero">
+            <div class="container signin-grid">
+                <div class="signin-left">
+                    <h1>Welcome Back</h1>
+                    <p>Log in to your account</p>
+                    <div class="signin-illustration">
+                        <img th:src="@{/images/female.jpeg}" alt="Fresh ingredients illustration">
+                    </div>
+                </div>
+
+                <div class="signin-card-wrap">
+                    <div class="signin-card">
+                        <h2>Log in</h2>
+                        <form id="loginForm">
+                            <div class="signin-field-group">
+                                <label for="usernameOrEmail">Email address</label>
+                                <div class="signin-field">
+                                    <span class="field-icon"><i class="fas fa-envelope"></i></span>
+                                    <input type="text" id="usernameOrEmail" name="usernameOrEmail" placeholder="Email address" required>
+                                </div>
+                            </div>
+
+                            <div class="signin-field-group">
+                                <label for="password">Password</label>
+                                <div class="signin-field">
+                                    <span class="field-icon"><i class="fas fa-lock"></i></span>
+                                    <input type="password" id="password" name="password" placeholder="Password" required>
+                                </div>
+                            </div>
+
+                            <div class="signin-row">
+                                <label class="remember-check">
+                                    <input type="checkbox" id="rememberMe">
+                                    <span>Remember me</span>
+                                </label>
+                                <a href="/register" class="forgot-link">Need an account?</a>
+                            </div>
+
+                            <button type="submit" class="signin-submit">Log In</button>
+                        </form>
+
+                        <p class="signup-line">Don't have an account? <a href="/register">Sign up</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-rail">
+            <div class="container rail-grid">
+                <article class="rail-item">
+                    <div class="rail-icon"><i class="fas fa-carrot"></i></div>
+                    <div>
+                        <h3>Find Recipes by Ingredients</h3>
+                        <p>Get recipes based on what you have at home.</p>
+                    </div>
+                </article>
+                <article class="rail-item">
+                    <div class="rail-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div>
+                        <h3>Create Your Meal Plans</h3>
+                        <p>Organize your weekly menu with ease.</p>
+                    </div>
+                </article>
+                <article class="rail-item">
+                    <div class="rail-icon"><i class="fas fa-cart-shopping"></i></div>
+                    <div>
+                        <h3>Generate Shopping Lists</h3>
+                        <p>Automatically build your grocery list.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+        <div id="alertContainer"></div>
+    </div>
+
+    <div id="loadingOverlay" class="position-fixed top-0 start-0 w-100 h-100 d-none loading-overlay">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-avatar-layer" aria-hidden="true">
+        <div class="avatar-shell avatar-shell-left">
+            <img class="dynamic-portrait" data-img-a="/images/female.jpeg" data-img-b="/images/male.jpeg" src="/images/female.jpeg" alt="Portrait rotation">
+        </div>
+        <div class="avatar-shell avatar-shell-right">
+            <img class="dynamic-portrait" data-img-a="/images/male.jpeg" data-img-b="/images/female.jpeg" src="/images/male.jpeg" alt="Portrait rotation">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/auth.js}"></script>
+    <script th:src="@{/js/avatar-rotator.js}"></script>
+</body>
+</html>

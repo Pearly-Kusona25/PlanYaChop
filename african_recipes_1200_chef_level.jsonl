@@ -1,0 +1,903 @@
+[
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Ground beef, Curry powder",
+    "output": "Based on those ingredients, you could make Jamaican Patties. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "instruction": "YES",
+    "input": "Selected meal: Jamaican Patties",
+    "output": "Recipe for Jamaican Patties:\nIngredients: Flour, Ground beef, Curry powder, Thyme, Scotch bonnet, Breadcrumbs\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Flour"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Jamaican Patties for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Rice, Chicken liver, Ground pork",
+    "output": "Based on those ingredients, you could make Cajun Dirty Rice. It is a popular Lunch dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Cajun Dirty Rice",
+    "output": "Recipe for Cajun Dirty Rice:\nIngredients: Rice, Chicken liver, Ground pork, Bell peppers, Onions, Celery, Cajun spice\nInstructions: Prepare the ingredients, combine in a pot/pan as per Lunch standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: Rice"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Cajun Dirty Rice for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Rice in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Chicken, Bird's eye chili, Garlic",
+    "output": "Based on those ingredients, you could make Piri Piri Chicken. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Piri Piri Chicken",
+    "output": "Recipe for Piri Piri Chicken:\nIngredients: Chicken, Bird's eye chili, Garlic, Lemon, Paprika, Oregano\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: Garlic\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Piri Piri Chicken for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Chicken in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Sugar, Ginger",
+    "output": "Based on those ingredients, you could make South African Koeksisters. It is a popular Dessert dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: South African Koeksisters",
+    "output": "Recipe for South African Koeksisters:\nIngredients: Flour, Sugar, Ginger, Cinnamon, Lemon juice, Oil\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dessert standards, and cook until done.\n\nShopping List:\n- Produce: Ginger\n- Pantry: Flour, Sugar, Oil"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale South African Koeksisters for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Sugar, Baking powder",
+    "output": "Based on those ingredients, you could make BUNS. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: BUNS",
+    "output": "Recipe for BUNS:\nIngredients: Flour, Sugar, Baking powder, Milk, Nutmeg, Eggs\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Flour, Sugar"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale BUNS for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Butter, Milk",
+    "output": "Based on those ingredients, you could make Chin Chin. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Chin Chin",
+    "output": "Recipe for Chin Chin:\nIngredients: Flour, Butter, Milk, Nutmeg, Sugar, Oil\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Flour, Sugar, Oil"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Chin Chin for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Yeast, Coconut milk",
+    "output": "Based on those ingredients, you could make Mandazi. It is a popular Breakfast dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Mandazi",
+    "output": "Recipe for Mandazi:\nIngredients: Flour, Yeast, Coconut milk, Cardamom, Sugar\nInstructions: Prepare the ingredients, combine in a pot/pan as per Breakfast standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Flour, Sugar"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Mandazi for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Butter, Minced beef",
+    "output": "Based on those ingredients, you could make Nigerian Meat Pie. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Nigerian Meat Pie",
+    "output": "Recipe for Nigerian Meat Pie:\nIngredients: Flour, Butter, Minced beef, Carrots, Potatoes, Thyme\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: Carrots\n- Pantry: Flour"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Nigerian Meat Pie for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Baking powder, Canned mackerel",
+    "output": "Based on those ingredients, you could make Fish Roll. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Fish Roll",
+    "output": "Recipe for Fish Roll:\nIngredients: Flour, Baking powder, Canned mackerel, Onions, Pepper\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: Flour"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Fish Roll for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Yeast, Sugar",
+    "output": "Based on those ingredients, you could make Puff Puff. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Puff Puff",
+    "output": "Recipe for Puff Puff:\nIngredients: Flour, Yeast, Sugar, Warm water, Nutmeg\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Flour, Sugar"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Puff Puff for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Spinach, Palm oil, Assorted meat",
+    "output": "Based on those ingredients, you could make Efo Riro. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Efo Riro",
+    "output": "Recipe for Efo Riro:\nIngredients: Spinach, Palm oil, Assorted meat, Stockfish, Crayfish, Bell peppers\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Efo Riro for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Spinach in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Egusi seeds, Spinach, Palm oil",
+    "output": "Based on those ingredients, you could make Egusi Soup. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Egusi Soup",
+    "output": "Recipe for Egusi Soup:\nIngredients: Egusi seeds, Spinach, Palm oil, Beef, Stockfish, Habanero\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Egusi Soup for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Egusi seeds in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Palm fruit concentrate, Beef, Fresh fish",
+    "output": "Based on those ingredients, you could make Banga Soup. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Banga Soup",
+    "output": "Recipe for Banga Soup:\nIngredients: Palm fruit concentrate, Beef, Fresh fish, Banga spices, Beletete leaves\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Banga Soup for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Palm fruit concentrate in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Afang leaves, Waterleaf, Palm oil",
+    "output": "Based on those ingredients, you could make Afang Soup. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Afang Soup",
+    "output": "Recipe for Afang Soup:\nIngredients: Afang leaves, Waterleaf, Palm oil, Beef, Dry fish, Crayfish\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Afang Soup for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Afang leaves in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Pumpkin leaves, Waterleaf, Beef",
+    "output": "Based on those ingredients, you could make Edikang Ikong. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Edikang Ikong",
+    "output": "Recipe for Edikang Ikong:\nIngredients: Pumpkin leaves, Waterleaf, Beef, Kanda, Periwinkles, Palm oil\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Edikang Ikong for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Pumpkin leaves in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Okra, Shrimp, Beef",
+    "output": "Based on those ingredients, you could make Okra Soup. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Okra Soup",
+    "output": "Recipe for Okra Soup:\nIngredients: Okra, Shrimp, Beef, Palm oil, Spinach, Crayfish\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Okra Soup for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Okra in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Ogbono seeds, Meat stock, Palm oil",
+    "output": "Based on those ingredients, you could make Ogbono Soup. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Ogbono Soup",
+    "output": "Recipe for Ogbono Soup:\nIngredients: Ogbono seeds, Meat stock, Palm oil, Crayfish, Spinach\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Ogbono Soup for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Ogbono seeds in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Bitter leaves, Cocoyam paste, Palm oil",
+    "output": "Based on those ingredients, you could make Bitter Leaf Soup. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Bitter Leaf Soup",
+    "output": "Recipe for Bitter Leaf Soup:\nIngredients: Bitter leaves, Cocoyam paste, Palm oil, Stockfish, Assorted meat\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Bitter Leaf Soup for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Bitter leaves in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Yam flour, Chicken, Crayfish",
+    "output": "Based on those ingredients, you could make White Soup (Afia Efere). It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: White Soup (Afia Efere)",
+    "output": "Recipe for White Soup (Afia Efere):\nIngredients: Yam flour, Chicken, Crayfish, Uyayak pod, Pepper\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale White Soup (Afia Efere) for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Yam flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Goat meat, Pepper soup spices, Ginger",
+    "output": "Based on those ingredients, you could make Pepper Soup. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Pepper Soup",
+    "output": "Recipe for Pepper Soup:\nIngredients: Goat meat, Pepper soup spices, Ginger, Garlic, Habanero, Scent leaves\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: Ginger, Garlic\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Pepper Soup for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Goat meat in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Rice, Tomatoes, Onions",
+    "output": "Based on those ingredients, you could make Cameroonian Jollof Rice. It is a popular Lunch dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Cameroonian Jollof Rice",
+    "output": "Recipe for Cameroonian Jollof Rice:\nIngredients: Rice, Tomatoes, Onions, Beef, Green beans, Carrots, Garlic, Ginger\nInstructions: Prepare the ingredients, combine in a pot/pan as per Lunch standards, and cook until done.\n\nShopping List:\n- Produce: Tomatoes, Onions, Carrots, Garlic, Ginger\n- Pantry: Rice"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Cameroonian Jollof Rice for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Rice in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Chicken, Ripe plantains, Bell peppers",
+    "output": "Based on those ingredients, you could make Poulet DG. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Poulet DG",
+    "output": "Recipe for Poulet DG:\nIngredients: Chicken, Ripe plantains, Bell peppers, Carrots, Ginger, Celery\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: Carrots, Ginger\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Poulet DG for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Chicken in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Huckleberry leaves, Tomatoes, Onions",
+    "output": "Based on those ingredients, you could make Njama Njama. It is a popular Side dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Njama Njama",
+    "output": "Recipe for Njama Njama:\nIngredients: Huckleberry leaves, Tomatoes, Onions, Palm oil, Bouillon\nInstructions: Prepare the ingredients, combine in a pot/pan as per Side standards, and cook until done.\n\nShopping List:\n- Produce: Tomatoes, Onions\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Njama Njama for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Huckleberry leaves in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Fresh corn, Palm oil, Spinach",
+    "output": "Based on those ingredients, you could make Koki Corn. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Koki Corn",
+    "output": "Recipe for Koki Corn:\nIngredients: Fresh corn, Palm oil, Spinach, Salt, Habanero\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Salt"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Koki Corn for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Fresh corn in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Cocoyam, Cocoyam leaves, Palm oil",
+    "output": "Based on those ingredients, you could make Ekwang. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Ekwang",
+    "output": "Recipe for Ekwang:\nIngredients: Cocoyam, Cocoyam leaves, Palm oil, Dry fish, Crayfish, Country onion\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Ekwang for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Cocoyam in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Pounded cocoyam, Achu soup spices, Limestone",
+    "output": "Based on those ingredients, you could make Achu. It is a popular Celebration dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Achu",
+    "output": "Recipe for Achu:\nIngredients: Pounded cocoyam, Achu soup spices, Limestone, Palm oil, Beef skin\nInstructions: Prepare the ingredients, combine in a pot/pan as per Celebration standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Achu for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Pounded cocoyam in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Corn, Beans, Palm oil",
+    "output": "Based on those ingredients, you could make Cornchaff. It is a popular Lunch dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Cornchaff",
+    "output": "Recipe for Cornchaff:\nIngredients: Corn, Beans, Palm oil, Onions, Crayfish, Smoked fish\nInstructions: Prepare the ingredients, combine in a pot/pan as per Lunch standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Cornchaff for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Corn in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Bitter leaves, Peanuts, Beef",
+    "output": "Based on those ingredients, you could make Ndole. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Ndole",
+    "output": "Recipe for Ndole:\nIngredients: Bitter leaves, Peanuts, Beef, Shrimp, Onions, Garlic, Oil\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: Onions, Garlic\n- Pantry: Oil"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Ndole for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Bitter leaves in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Butter, Canned mackerel",
+    "output": "Based on those ingredients, you could make Fish Pie. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Fish Pie",
+    "output": "Recipe for Fish Pie:\nIngredients: Flour, Butter, Canned mackerel, Hard boiled eggs, Onions\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: Flour"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Fish Pie for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Bananas, Cornmeal, Flour",
+    "output": "Based on those ingredients, you could make Accra Banana. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Accra Banana",
+    "output": "Recipe for Accra Banana:\nIngredients: Bananas, Cornmeal, Flour, Sugar, Salt\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Flour, Sugar, Salt"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Accra Banana for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Bananas in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Black eyed peas, Palm oil, Spinach",
+    "output": "Based on those ingredients, you could make Koki Beans. It is a popular Lunch dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Koki Beans",
+    "output": "Recipe for Koki Beans:\nIngredients: Black eyed peas, Palm oil, Spinach, Pepper, Salt\nInstructions: Prepare the ingredients, combine in a pot/pan as per Lunch standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Salt"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Koki Beans for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Black eyed peas in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Sugar, Yeast",
+    "output": "Based on those ingredients, you could make Gateau (Cameroonian Doughnuts). It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Gateau (Cameroonian Doughnuts)",
+    "output": "Recipe for Gateau (Cameroonian Doughnuts):\nIngredients: Flour, Sugar, Yeast, Eggs, Butter, Milk\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Flour, Sugar"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Gateau (Cameroonian Doughnuts) for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Croaker fish, Ginger, Garlic",
+    "output": "Based on those ingredients, you could make Fried Fish. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Fried Fish",
+    "output": "Recipe for Fried Fish:\nIngredients: Croaker fish, Ginger, Garlic, White pepper, Bouillon, Oil\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: Ginger, Garlic\n- Pantry: Oil"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Fried Fish for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Croaker fish in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Unripe plantains, Palm oil, Beef",
+    "output": "Based on those ingredients, you could make Sese Plantains. It is a popular Lunch dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Sese Plantains",
+    "output": "Recipe for Sese Plantains:\nIngredients: Unripe plantains, Palm oil, Beef, Onions, Bitter leaves\nInstructions: Prepare the ingredients, combine in a pot/pan as per Lunch standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Sese Plantains for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Unripe plantains in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Fish, Mbongo spice, Burnt onions",
+    "output": "Based on those ingredients, you could make Mbongo Tchobi. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Mbongo Tchobi",
+    "output": "Recipe for Mbongo Tchobi:\nIngredients: Fish, Mbongo spice, Burnt onions, Tomatoes, Palm oil\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: Tomatoes\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Mbongo Tchobi for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Fish in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Condensed milk, Butter, Vanilla",
+    "output": "Based on those ingredients, you could make Condensed Milk Toffee. It is a popular Dessert dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Condensed Milk Toffee",
+    "output": "Recipe for Condensed Milk Toffee:\nIngredients: Condensed milk, Butter, Vanilla\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dessert standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Condensed Milk Toffee for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Condensed milk in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Unripe plantain, Smoked fish, Palm oil",
+    "output": "Based on those ingredients, you could make Plantain Porridge. It is a popular Lunch dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Plantain Porridge",
+    "output": "Recipe for Plantain Porridge:\nIngredients: Unripe plantain, Smoked fish, Palm oil, Pumpkin leaves, Crayfish\nInstructions: Prepare the ingredients, combine in a pot/pan as per Lunch standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Plantain Porridge for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Unripe plantain in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Red beans, Tomatoes, Onions",
+    "output": "Based on those ingredients, you could make Stewed Beans. It is a popular Lunch dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Stewed Beans",
+    "output": "Recipe for Stewed Beans:\nIngredients: Red beans, Tomatoes, Onions, Garlic, Crayfish, Vegetable oil\nInstructions: Prepare the ingredients, combine in a pot/pan as per Lunch standards, and cook until done.\n\nShopping List:\n- Produce: Tomatoes, Onions, Garlic\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Stewed Beans for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Red beans in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Spaghetti, Eggs, Onions",
+    "output": "Based on those ingredients, you could make Spaghetti Omelette. It is a popular Breakfast dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Spaghetti Omelette",
+    "output": "Recipe for Spaghetti Omelette:\nIngredients: Spaghetti, Eggs, Onions, Tomatoes, Peppers\nInstructions: Prepare the ingredients, combine in a pot/pan as per Breakfast standards, and cook until done.\n\nShopping List:\n- Produce: Onions, Tomatoes, Peppers\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Spaghetti Omelette for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Spaghetti in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Shredded coconut, Sugar",
+    "output": "Based on those ingredients, you could make Coconut Cake. It is a popular Dessert dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Coconut Cake",
+    "output": "Recipe for Coconut Cake:\nIngredients: Flour, Shredded coconut, Sugar, Butter, Eggs, Baking powder\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dessert standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Flour, Sugar"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Coconut Cake for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Ripe plantains, Eggs, Sausage",
+    "output": "Based on those ingredients, you could make Plantain Frittata. It is a popular Breakfast dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Plantain Frittata",
+    "output": "Recipe for Plantain Frittata:\nIngredients: Ripe plantains, Eggs, Sausage, Bell peppers, Onions\nInstructions: Prepare the ingredients, combine in a pot/pan as per Breakfast standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Plantain Frittata for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Ripe plantains in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Sugar, Butter",
+    "output": "Based on those ingredients, you could make Air Fryer Chin Chin. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Air Fryer Chin Chin",
+    "output": "Recipe for Air Fryer Chin Chin:\nIngredients: Flour, Sugar, Butter, Nutmeg, Milk\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Flour, Sugar"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Air Fryer Chin Chin for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Rice, Coconut milk, Shrimp",
+    "output": "Based on those ingredients, you could make Coconut Fried Rice. It is a popular Lunch dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Coconut Fried Rice",
+    "output": "Recipe for Coconut Fried Rice:\nIngredients: Rice, Coconut milk, Shrimp, Mixed veggies, Curry powder\nInstructions: Prepare the ingredients, combine in a pot/pan as per Lunch standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Rice"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Coconut Fried Rice for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Rice in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Tilapia, Tomatoes, Peppers",
+    "output": "Based on those ingredients, you could make Nigerian Fish Stew. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Nigerian Fish Stew",
+    "output": "Recipe for Nigerian Fish Stew:\nIngredients: Tilapia, Tomatoes, Peppers, Onions, Oil, Thyme\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: Tomatoes, Peppers, Onions\n- Pantry: Oil"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Nigerian Fish Stew for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Tilapia in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Yeast, Sugar",
+    "output": "Based on those ingredients, you could make Agege Bread. It is a popular Staple dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Agege Bread",
+    "output": "Recipe for Agege Bread:\nIngredients: Flour, Yeast, Sugar, Butter, Dough improver\nInstructions: Prepare the ingredients, combine in a pot/pan as per Staple standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Flour, Sugar"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Agege Bread for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Gizzards, Plantains, Bell peppers",
+    "output": "Based on those ingredients, you could make Gizdodo. It is a popular Side dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Gizdodo",
+    "output": "Recipe for Gizdodo:\nIngredients: Gizzards, Plantains, Bell peppers, Onions, Tomato sauce\nInstructions: Prepare the ingredients, combine in a pot/pan as per Side standards, and cook until done.\n\nShopping List:\n- Produce: Plantains, Onions\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Gizdodo for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Gizzards in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Beans, Red peppers, Onions",
+    "output": "Based on those ingredients, you could make Moin Moin. It is a popular Side dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Moin Moin",
+    "output": "Recipe for Moin Moin:\nIngredients: Beans, Red peppers, Onions, Vegetable oil, Fish, Eggs\nInstructions: Prepare the ingredients, combine in a pot/pan as per Side standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Moin Moin for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Beans in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Beef, Suya spice, Peanut powder",
+    "output": "Based on those ingredients, you could make Suya. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Suya",
+    "output": "Recipe for Suya:\nIngredients: Beef, Suya spice, Peanut powder, Oil, Onions\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: Oil"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Suya for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Beef in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Beans, Sweet corn, Palm oil",
+    "output": "Based on those ingredients, you could make Adalu (Beans and Corn). It is a popular Lunch dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Adalu (Beans and Corn)",
+    "output": "Recipe for Adalu (Beans and Corn):\nIngredients: Beans, Sweet corn, Palm oil, Onions, Pepper\nInstructions: Prepare the ingredients, combine in a pot/pan as per Lunch standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Adalu (Beans and Corn) for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Beans in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Catfish, Pepper soup spice, Habanero",
+    "output": "Based on those ingredients, you could make Oven Grilled Catfish. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Oven Grilled Catfish",
+    "output": "Recipe for Oven Grilled Catfish:\nIngredients: Catfish, Pepper soup spice, Habanero, Onions, Oil\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: Oil"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Oven Grilled Catfish for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Catfish in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Rice, Turmeric, Garlic",
+    "output": "Based on those ingredients, you could make Turmeric Rice. It is a popular Side dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Turmeric Rice",
+    "output": "Recipe for Turmeric Rice:\nIngredients: Rice, Turmeric, Garlic, Onions, Chicken broth\nInstructions: Prepare the ingredients, combine in a pot/pan as per Side standards, and cook until done.\n\nShopping List:\n- Produce: Garlic, Onions\n- Pantry: Rice"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Turmeric Rice for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Rice in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Puna yam, Salt, Oil",
+    "output": "Based on those ingredients, you could make Yam Fries. It is a popular Snack dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Yam Fries",
+    "output": "Recipe for Yam Fries:\nIngredients: Puna yam, Salt, Oil\nInstructions: Prepare the ingredients, combine in a pot/pan as per Snack standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Salt, Oil"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Yam Fries for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Puna yam in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Garden eggs, Palm oil, Smoked fish",
+    "output": "Based on those ingredients, you could make Garden Egg Sauce. It is a popular Lunch dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Garden Egg Sauce",
+    "output": "Recipe for Garden Egg Sauce:\nIngredients: Garden eggs, Palm oil, Smoked fish, Onions, Crayfish\nInstructions: Prepare the ingredients, combine in a pot/pan as per Lunch standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Garden Egg Sauce for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Garden eggs in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Yam, Palm oil, Peppers",
+    "output": "Based on those ingredients, you could make Asaro (Yam Pottage). It is a popular Lunch dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Asaro (Yam Pottage)",
+    "output": "Recipe for Asaro (Yam Pottage):\nIngredients: Yam, Palm oil, Peppers, Smoked fish, Onions\nInstructions: Prepare the ingredients, combine in a pot/pan as per Lunch standards, and cook until done.\n\nShopping List:\n- Produce: Peppers, Onions\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Asaro (Yam Pottage) for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Yam in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Chicken, Curry powder, Coconut milk",
+    "output": "Based on those ingredients, you could make Chicken Curry. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Chicken Curry",
+    "output": "Recipe for Chicken Curry:\nIngredients: Chicken, Curry powder, Coconut milk, Potatoes, Carrots\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: Carrots\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Chicken Curry for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Chicken in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Hibiscus petals, Pineapple, Ginger",
+    "output": "Based on those ingredients, you could make Zobo Drink. It is a popular Beverage dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Zobo Drink",
+    "output": "Recipe for Zobo Drink:\nIngredients: Hibiscus petals, Pineapple, Ginger, Sugar, Cloves\nInstructions: Prepare the ingredients, combine in a pot/pan as per Beverage standards, and cook until done.\n\nShopping List:\n- Produce: Ginger\n- Pantry: Sugar"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Zobo Drink for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Hibiscus petals in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Fanta, Sprite, Angostura bitters",
+    "output": "Based on those ingredients, you could make Chapman Drink. It is a popular Beverage dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Chapman Drink",
+    "output": "Recipe for Chapman Drink:\nIngredients: Fanta, Sprite, Angostura bitters, Grenadine, Cucumber, Orange\nInstructions: Prepare the ingredients, combine in a pot/pan as per Beverage standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Chapman Drink for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Fanta in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Flour, Malt drink, Eggs",
+    "output": "Based on those ingredients, you could make Maltese Pancakes. It is a popular Breakfast dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Maltese Pancakes",
+    "output": "Recipe for Maltese Pancakes:\nIngredients: Flour, Malt drink, Eggs, Sugar, Butter\nInstructions: Prepare the ingredients, combine in a pot/pan as per Breakfast standards, and cook until done.\n\nShopping List:\n- Produce: \n- Pantry: Flour, Sugar"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Maltese Pancakes for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Flour in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Beef, Soy sauce, Bell peppers",
+    "output": "Based on those ingredients, you could make Beef Stir Fry. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Beef Stir Fry",
+    "output": "Recipe for Beef Stir Fry:\nIngredients: Beef, Soy sauce, Bell peppers, Ginger, Garlic, Onions\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: Ginger, Garlic, Onions\n- Pantry: "
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Beef Stir Fry for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Beef in 2.5x the standard quantity."
+  },
+  {
+    "instruction": "Identify the meal from ingredients and provide a summary.",
+    "input": "Ingredients: Bell peppers, Minced meat, Rice",
+    "output": "Based on those ingredients, you could make Stuffed Bell Peppers. It is a popular Dinner dish. Would you like the full recipe and shopping list?"
+  },
+  {
+    "instruction": "Provide the full recipe and a categorized shopping list.",
+    "input": "Selected meal: Stuffed Bell Peppers",
+    "output": "Recipe for Stuffed Bell Peppers:\nIngredients: Bell peppers, Minced meat, Rice, Onions, Cheese\nInstructions: Prepare the ingredients, combine in a pot/pan as per Dinner standards, and cook until done.\n\nShopping List:\n- Produce: Onions\n- Pantry: Rice"
+  },
+  {
+    "instruction": "Scale this recipe for a different number of people.",
+    "input": "Scale Stuffed Bell Peppers for 10 people (Base is 4).",
+    "output": "To serve 10 people, multiply all ingredients by 2.5. For example, use Bell peppers in 2.5x the standard quantity."
+  }
+]

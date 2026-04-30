@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - PlanYaChop AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body class="landing-page landing-page-v2 auth-v3">
+<div class="landing-shell">
+    <nav class="landing-nav landing-nav-v2">
+        <div class="container landing-nav-inner landing-nav-inner-v2 platform-nav-inner">
+            <a class="landing-brand landing-brand-v2" href="/">
+                <span class="brand-icon brand-icon-v2"><i class="fas fa-carrot"></i></span>
+                <span class="brand-text brand-text-v2">PlanYaChop <em>AI</em></span>
+            </a>
+            <div class="landing-nav-actions">
+                <a href="/login" class="landing-login-link">Log in</a>
+                <a href="/" class="landing-login-btn landing-login-btn-v2">Back home</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="landing-main-v2 auth-main-v3">
+        <section class="landing-section auth-section-v3">
+            <div class="container auth-grid-v3">
+                <article class="auth-copy-v3">
+                    <span class="section-kicker">Create Account</span>
+                    <h1>Set up your PlanYaChop workspace.</h1>
+                    <p>Register once to save recipes, build dashboard plans, and keep your meal workflow in one place.</p>
+                    <ul class="auth-points-v3">
+                        <li>Fast onboarding with secure auth</li>
+                        <li>Saved favorites across sessions</li>
+                        <li>Personalized dashboard experience</li>
+                    </ul>
+                </article>
+
+                <article class="platform-card auth-card-v3">
+                    <h2>Sign up</h2>
+                    <form id="registerForm" class="auth-form-v3">
+                        <div class="row g-2">
+                            <div class="col-12 col-md-6">
+                                <label for="firstName" class="form-label">First name</label>
+                                <input type="text" id="firstName" name="firstName" class="form-control" required placeholder="First name">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="lastName" class="form-label">Last name</label>
+                                <input type="text" id="lastName" name="lastName" class="form-control" required placeholder="Last name">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" id="username" name="username" class="form-control" required placeholder="Username">
+                        </div>
+                        <div>
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" id="email" name="email" class="form-control" required placeholder="Email address">
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-12 col-md-6">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" required placeholder="Password">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="confirmPassword" class="form-label">Confirm password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required placeholder="Confirm password">
+                            </div>
+                        </div>
+                        <label class="remember-check auth-terms-v3">
+                            <input type="checkbox" id="agreeTerms" required>
+                            <span>I agree to the <a href="/about">Terms</a> and <a href="/contact">Privacy Policy</a></span>
+                        </label>
+                        <button type="submit" class="btn admin-action-btn w-100">Create Account</button>
+                    </form>
+                    <p class="auth-switch-v3">Already have an account? <a href="/login">Log in</a></p>
+                </article>
+            </div>
+        </section>
+    </main>
+</div>
+
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+    <div id="alertContainer"></div>
+</div>
+
+<div id="loadingOverlay" class="position-fixed top-0 start-0 w-100 h-100 d-none loading-overlay">
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/theme.js}"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Ld5X5ksAAAAAKueb18nSuVMtokfPOZ6z7LRMTf2"></script>
+<script th:src="@{/js/auth.js}"></script>
+</body>
+</html>

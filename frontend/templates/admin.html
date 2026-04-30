@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Capabilities - PlanYaChop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body class="landing-page landing-page-v2 platform-page admin-v3">
+<div class="landing-shell">
+    <nav class="landing-nav landing-nav-v2">
+        <div class="container landing-nav-inner landing-nav-inner-v2 platform-nav-inner">
+            <a class="landing-brand landing-brand-v2" href="/">
+                <span class="brand-icon brand-icon-v2"><i class="fas fa-carrot"></i></span>
+                <span class="brand-text brand-text-v2">PlanYaChop <em>AI</em></span>
+            </a>
+            <ul class="landing-links landing-links-v2 platform-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a class="active" href="/admin">Admin</a></li>
+            </ul>
+            <div class="landing-nav-actions">
+                <a href="/dashboard" class="landing-login-link">User View</a>
+                <a href="#" class="landing-login-btn landing-login-btn-v2" data-action="logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="landing-main-v2 platform-main">
+        <section class="landing-section platform-hero admin-hero-v3">
+            <div class="container">
+                <div class="platform-intro">
+                    <span class="section-kicker">Admin Capabilities</span>
+                    <h1>Select a capability to manage the platform.</h1>
+                    <p>The admin landing page now shows capabilities only. Click any card below to open the dedicated admin workspace.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="landing-section pt-0">
+            <div class="container">
+                <div class="admin-capabilities-grid admin-capabilities-grid-links">
+                    <a class="platform-card capability-link" href="/admin/recipes"><h5><i class="fas fa-utensils"></i> Recipe Management</h5><p>Create, update, and delete recipes including ingredients and instructions.</p></a>
+                    <a class="platform-card capability-link" href="/admin/users"><h5><i class="fas fa-user-cog"></i> User Management</h5><p>Enable/disable accounts and remove users when needed.</p></a>
+                    <a class="platform-card capability-link" href="/admin/logs"><h5><i class="fas fa-file-lines"></i> System Logs</h5><p>Monitor live system events and admin actions.</p></a>
+                    <a class="platform-card capability-link" href="/admin/activity"><h5><i class="fas fa-chart-line"></i> User Activity</h5><p>View recent user actions and popular recipes based on usage.</p></a>
+                    <a class="platform-card capability-link" href="/admin/analytics"><h5><i class="fas fa-chart-area"></i> Meal Plan Analytics</h5><p>Track meal plan usage and moderation queue signals.</p></a>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/theme.js}"></script>
+<script th:src="@{/js/auth.js}"></script>
+<script>
+    document.querySelectorAll('[data-action="logout"]').forEach(btn => {
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            window.authService.logout();
+        });
+    });
+</script>
+</body>
+</html>

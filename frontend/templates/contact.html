@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - PlanYaChop AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body class="landing-page landing-page-v2 platform-page">
+    <div class="landing-shell">
+        <nav class="landing-nav landing-nav-v2">
+            <div class="container landing-nav-inner landing-nav-inner-v2 platform-nav-inner">
+                <a class="landing-brand landing-brand-v2" href="/">
+                    <span class="brand-icon brand-icon-v2"><i class="fas fa-carrot"></i></span>
+                    <span class="brand-text brand-text-v2">PlanYaChop <em>AI</em></span>
+                </a>
+                <ul class="landing-links landing-links-v2 platform-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#home-recipes">Recipes Feed</a></li>
+                    <li><a href="/#features">Features</a></li>
+                    <li><a href="/#cameroon-recipes">Recipes</a></li>
+                    <li><a href="/#how-it-works">How it works</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a class="active" href="/contact">Contact</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                </ul>
+                <div class="landing-nav-actions">
+                    <a href="/login" class="landing-login-link">Login</a>
+                    <a href="/register" class="landing-login-btn landing-login-btn-v2">Get Started</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="landing-main-v2 platform-main">
+            <section class="landing-section platform-hero">
+                <div class="container">
+                    <div class="platform-intro">
+                        <span class="section-kicker">Contact</span>
+                        <h1>Reach the PlanYaChop team.</h1>
+                        <p>For support, product feedback, and partnership requests, use the channels below. We respond to active users first and prioritize dashboard-impacting issues.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="landing-section pt-0">
+                <div class="container">
+                    <div class="platform-card-grid contact-card-grid">
+                        <article class="platform-card">
+                            <h2>Support</h2>
+                            <p>Email: <a class="platform-link" href="mailto:support@planyachop.ai">support@planyachop.ai</a></p>
+                            <p>Use this for login, dashboard, and recipe workflow issues.</p>
+                        </article>
+                        <article class="platform-card">
+                            <h2>Product feedback</h2>
+                            <p>Email: <a class="platform-link" href="mailto:product@planyachop.ai">product@planyachop.ai</a></p>
+                            <p>Share UX suggestions for planning, shopping, and meal recommendation flow.</p>
+                        </article>
+                        <article class="platform-card">
+                            <h2>Business</h2>
+                            <p>Email: <a class="platform-link" href="mailto:hello@planyachop.ai">hello@planyachop.ai</a></p>
+                            <p>For collaboration, partnerships, and enterprise deployment discussions.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/theme.js}"></script>
+</body>
+</html>
