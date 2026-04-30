@@ -21,7 +21,9 @@
                 </a>
                 <ul class="landing-links landing-links-v2">
                     <li><a class="active" href="/">Home</a></li>
+                    <li><a href="#home-recipes">Recipes Feed</a></li>
                     <li><a href="#features">Features</a></li>
+                    <li><a href="#cameroon-recipes">Recipes</a></li>
                     <li><a href="#how-it-works">How it works</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
@@ -37,7 +39,7 @@
             <section class="landing-hero landing-hero-v2">
                 <div class="container hero-grid hero-grid-v2">
                     <div class="hero-copy hero-copy-v2">
-                        <div class="hero-badge-v2"><span></span> AI meal planning for real kitchens</div>
+                        <div class="hero-badge-v2"><span></span> AI meal planning for real you</div>
                         <h1>Plan meals.<br>Chop stress.<br><span>Cook smarter</span> with AI.</h1>
                         <p>Turn ingredients, budget, and time into practical recipes, weekly plans, and shopping lists that actually fit your routine.</p>
                         <div class="hero-actions hero-actions-v2">
@@ -108,6 +110,18 @@
                 </div>
             </section>
 
+            <section id="home-recipes" class="landing-section home-recipes-v2">
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="section-kicker">Home Recipes</span>
+                        <h2>When users log in, Home shows the latest recipes immediately.</h2>
+                        <p>These recipes come from the database, including recipes created by admins.</p>
+                    </div>
+                    <p id="homeRecipesStatus" class="home-recipes-status">Checking session...</p>
+                    <div id="homeRecipesGrid" class="home-recipes-grid"></div>
+                </div>
+            </section>
+
             <section id="features" class="landing-section">
                 <div class="container">
                     <div class="section-heading">
@@ -147,6 +161,55 @@
                             <p>Reuse saved meals and refine future plans based on the meals you actually cook.</p>
                         </article>
                     </div>
+                </div>
+            </section>
+
+            <section id="cameroon-recipes" class="landing-section recipes-section-v2">
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="section-kicker">Cameroonian Meals</span>
+                        <h2>Pick a meal and unlock the full recipe after login.</h2>
+                        <p>Recipe cards are adapted from Precious Core's Cameroonian food collection. Sign in, click a meal, and view ingredients, steps, and cook time.</p>
+                    </div>
+                    <div class="recipes-grid-v2 reveal-section">
+                        <button type="button" class="meal-card-v2" data-meal-id="jollof-rice">
+                            <span class="meal-card-tag">Rice Classic</span>
+                            <h3>Cameroon Jollof Rice</h3>
+                            <p>Tomato-rich rice cooked with aromatics and vegetables for a party-ready main.</p>
+                            <span class="meal-card-meta">Prep 15m • Cook 60m</span>
+                        </button>
+                        <button type="button" class="meal-card-v2" data-meal-id="achu-yellow-soup">
+                            <span class="meal-card-tag">Traditional</span>
+                            <h3>Achu &amp; Yellow Soup</h3>
+                            <p>Pounded cocoyam served with a vibrant yellow soup built from stock, palm oil, and spice.</p>
+                            <span class="meal-card-meta">Prep 15m • Cook 30m</span>
+                        </button>
+                        <button type="button" class="meal-card-v2" data-meal-id="fufu-corn">
+                            <span class="meal-card-tag">Side Dish</span>
+                            <h3>Fufu Corn</h3>
+                            <p>Cameroonian corn fufu with a smooth, firm texture for soups and vegetable stews.</p>
+                            <span class="meal-card-meta">Prep 10m • Cook 20m</span>
+                        </button>
+                        <button type="button" class="meal-card-v2" data-meal-id="ekwang">
+                            <span class="meal-card-tag">South West</span>
+                            <h3>Ekwang</h3>
+                            <p>Grated cocoyam wrapped in leaves and simmered with palm oil, crayfish, and protein.</p>
+                            <span class="meal-card-meta">Prep 60m • Cook 30m</span>
+                        </button>
+                        <button type="button" class="meal-card-v2" data-meal-id="njangsa-sauce">
+                            <span class="meal-card-tag">Stew</span>
+                            <h3>Njangsa Sauce</h3>
+                            <p>Creamy njangsa seed sauce with fish, herbs, and tomatoes for yam, rice, or plantain.</p>
+                            <span class="meal-card-meta">Prep 20m • Cook 25m</span>
+                        </button>
+                        <button type="button" class="meal-card-v2" data-meal-id="koki-corn">
+                            <span class="meal-card-tag">Vegan</span>
+                            <h3>Koki Corn</h3>
+                            <p>Fresh corn mixture wrapped in banana leaves and steamed until tender and aromatic.</p>
+                            <span class="meal-card-meta">Prep 30m • Cook 30m</span>
+                        </button>
+                    </div>
+                    <p class="recipe-login-note" id="recipeLoginHint">Log in to open full recipes.</p>
                 </div>
             </section>
 
@@ -197,6 +260,73 @@
             </section>
         </main>
     </div>
+
+    <div class="modal fade" id="mealRecipeModal" tabindex="-1" aria-labelledby="mealRecipeModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content meal-recipe-modal-content">
+                <div class="modal-header meal-recipe-modal-header">
+                    <div>
+                        <span class="section-kicker mb-2 d-inline-block">Selected Meal</span>
+                        <h5 class="modal-title" id="mealRecipeModalTitle">Recipe details</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body meal-recipe-modal-body">
+                    <p class="recipe-summary" id="recipeSummary"></p>
+                    <div class="recipe-meta-v2" id="recipeMeta"></div>
+                    <div class="recipe-columns-v2">
+                        <div>
+                            <h6>Ingredients</h6>
+                            <ul id="recipeIngredients" class="recipe-list-v2"></ul>
+                        </div>
+                        <div>
+                            <h6>Method</h6>
+                            <ol id="recipeSteps" class="recipe-steps-v2"></ol>
+                        </div>
+                    </div>
+                    <a id="recipeSourceLink" class="recipe-source-link" href="#" target="_blank" rel="noopener noreferrer">View source recipe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mealLoginModal" tabindex="-1" aria-labelledby="mealLoginModalTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content meal-login-modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title" id="mealLoginModalTitle">Login required</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Please log in to open full meal recipes and start the meal chatbot.</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="/login" class="btn-start btn-start-v2">Login</a>
+                    <a href="/register" class="btn-demo btn-demo-v2">Create account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="meal-chatbot-v2" id="mealChatbot" aria-live="polite">
+        <header class="meal-chatbot-head">
+            <div>
+                <strong>Meal Chat</strong>
+                <small id="mealChatSubtitle">Select a meal to begin.</small>
+            </div>
+            <button type="button" class="meal-chat-close" id="mealChatClose" aria-label="Close chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </header>
+        <div class="meal-chat-body" id="mealChatMessages"></div>
+        <div class="meal-chat-quick" id="mealChatQuickActions"></div>
+        <form class="meal-chat-form" id="mealChatForm">
+            <input type="text" id="mealChatInput" placeholder="Ask about ingredients, time, or serving ideas..." autocomplete="off">
+            <button type="submit" aria-label="Send meal chat message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </aside>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script th:src="@{/js/main.js}"></script>
