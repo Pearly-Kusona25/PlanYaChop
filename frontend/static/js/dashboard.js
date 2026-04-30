@@ -39,8 +39,8 @@ function bindRequestButtons() {
         mealPlanButton.addEventListener("click", async () => {
             mealPlanButton.disabled = true;
             mealPlanButton.textContent = "Loading Meal Plan...";
-            await ensureDashboardCache();
-            renderPlanner((dashboardCache && dashboardCache.weeklyPlanner) || []);
+            const planner = await requestMealPlan();
+            renderPlanner(planner);
             mealPlanButton.textContent = "Meal Plan Requested";
         });
     }
@@ -49,8 +49,8 @@ function bindRequestButtons() {
         shoppingButton.addEventListener("click", async () => {
             shoppingButton.disabled = true;
             shoppingButton.textContent = "Loading Shopping List...";
-            await ensureDashboardCache();
-            renderShopping((dashboardCache && dashboardCache.shoppingList) || []);
+            const shopping = await requestShoppingList();
+            renderShopping(shopping);
             shoppingButton.textContent = "Shopping List Requested";
         });
     }
@@ -61,6 +61,40 @@ async function ensureDashboardCache() {
         return;
     }
     await loadDashboardBaseData();
+}
+
+async function requestMealPlan() {
+    try {
+        const response = await fetch("/api/recipes/meal-plan/request", {
+            method: "POST",
+            headers: buildHeaders()
+        });
+        if (!response.ok) {
+            throw new Error("Meal plan request failed");
+        }
+        const payload = await response.json();
+        return Array.isArray(payload) ? payload : [];
+    } catch (error) {
+        console.error("Meal plan request error:", error);
+        return [];
+    }
+}
+
+async function requestShoppingList() {
+    try {
+        const response = await fetch("/api/recipes/shopping-list/request", {
+            method: "POST",
+            headers: buildHeaders()
+        });
+        if (!response.ok) {
+            throw new Error("Shopping list request failed");
+        }
+        const payload = await response.json();
+        return Array.isArray(payload) ? payload : [];
+    } catch (error) {
+        console.error("Shopping list request error:", error);
+        return [];
+    }
 }
 
 function renderSavedRecipes(recipes) {
