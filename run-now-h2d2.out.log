@@ -65,3 +65,8 @@
 2026-05-07T07:58:15.726+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
 2026-05-07T07:58:15.738+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] com.smartrecipe.SmartRecipeApplication   : Started SmartRecipeApplication in 7.05 seconds (process running for 7.595)
 2026-05-07T07:58:15.843+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] com.smartrecipe.SmartRecipeApplication   : Ensured default admin 'admin' (email: admin@planyachop.local). Password reset on startup; change it.
+2026-05-07T07:58:43.133+01:00  INFO 25308 --- [smart-recipe-app] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-07T07:58:43.134+01:00  INFO 25308 --- [smart-recipe-app] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-07T07:58:43.137+01:00  INFO 25308 --- [smart-recipe-app] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-07T07:58:43.165+01:00  WARN 25308 --- [smart-recipe-app] [nio-8080-exec-1] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-05-07T07:58:43.190+01:00  WARN 25308 --- [smart-recipe-app] [nio-8080-exec-1] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
