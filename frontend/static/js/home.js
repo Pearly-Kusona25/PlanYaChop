@@ -3,6 +3,7 @@ let homeFavorites = new Set();
 let homeShowFavoritesOnly = false;
 let homeActiveRecipeId = null;
 let homeRecipeModal = null;
+let homeChatbot = null;
 
 document.addEventListener("DOMContentLoaded", async () => {
     if (!window.location.pathname.includes("/home")) {
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     homeRecipeModal = window.bootstrap ? new window.bootstrap.Modal(document.getElementById("homeRecipeModal")) : null;
     bindHomeInteractions();
+    initHomeChatbot();
     await loadHomeMeals();
     await loadFavorites();
     renderHomeMeals();
@@ -63,6 +65,16 @@ function bindHomeInteractions() {
             renderHomeMeals();
         });
     }
+}
+
+function initHomeChatbot() {
+    if (!window.PlanYaChopChatbot || typeof window.PlanYaChopChatbot.createChatbot !== "function") {
+        return;
+    }
+    homeChatbot = window.PlanYaChopChatbot.createChatbot({
+        onMealPlanRequest: async (days) => await requestMealPlan(days),
+        onShoppingListRequest: async () => await requestShoppingList()
+    });
 }
 
 async function loadHomeMeals() {
@@ -211,6 +223,55 @@ async function openRecipeModal(id) {
     if (homeRecipeModal) {
         homeRecipeModal.show();
     }
+    if (homeChatbot && typeof homeChatbot.activateForRecipe === "function") {
+        homeChatbot.activateForRecipe(recipe);
+    }
+}
+
+async function requestMealPlan(days = 7) {
+    const response = await fetch("/api/recipes/meal-plan/request", {
+        method: "POST",
+        headers: buildAuthHeaders()
+    });
+    if (!response.ok) {
+        return [];
+    }
+    const payload = await response.json();
+    const rows = Array.isArray(payload) ? payload : [];
+    return limitPlanByDays(rows, days);
+}
+
+async function requestShoppingList() {
+    const response = await fetch("/api/recipes/shopping-list/request", {
+        method: "POST",
+        headers: buildAuthHeaders()
+    });
+    if (!response.ok) {
+        return [];
+    }
+    const payload = await response.json();
+    return Array.isArray(payload) ? payload : [];
+}
+
+function limitPlanByDays(entries, days) {
+    const safeDays = Math.min(7, Math.max(1, Number(days) || 7));
+    const allowedDays = [];
+    const output = [];
+
+    entries.forEach((entry) => {
+        const day = entry?.day || "";
+        if (!day) {
+            return;
+        }
+        if (!allowedDays.includes(day) && allowedDays.length < safeDays) {
+            allowedDays.push(day);
+        }
+        if (allowedDays.includes(day)) {
+            output.push(entry);
+        }
+    });
+
+    return output;
 }
 
 function formatIngredient(item) {

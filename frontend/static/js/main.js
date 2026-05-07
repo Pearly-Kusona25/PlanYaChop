@@ -245,9 +245,17 @@ function initLandingAuthControls() {
     }
 
     navActions.innerHTML = `
+        <div class="language-toggle btn-group" role="group" aria-label="Language toggle">
+            <button type="button" class="btn btn-outline-primary active" data-language="en">English</button>
+            <button type="button" class="btn btn-outline-primary" data-language="fr">Francais</button>
+            <button type="button" class="btn btn-outline-primary" data-language="pid">Pidgin</button>
+        </div>
+        <a href="/home" class="landing-login-link">My Meals</a>
         <a href="/dashboard" class="landing-login-link">Dashboard</a>
         <button type="button" class="landing-login-btn landing-login-btn-v2" id="landingLogoutBtn">Logout</button>
     `;
+
+    window.dispatchEvent(new CustomEvent("planyachop:rebind-language"));
 
     const logoutButton = document.getElementById("landingLogoutBtn");
     if (!logoutButton) {

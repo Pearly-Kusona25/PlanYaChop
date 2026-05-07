@@ -1,0 +1,67 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.smartrecipe:PlanYaChop >---------------------
+[INFO] Building PlanYaChop 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.0:run (default-cli) > test-compile @ PlanYaChop >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ PlanYaChop ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ PlanYaChop ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 41 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ PlanYaChop ---
+[INFO] skip non existing resourceDirectory C:\Users\HP\Desktop\PlanYaChop\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ PlanYaChop ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] 
+[INFO] <<< spring-boot:3.2.0:run (default-cli) < test-compile @ PlanYaChop <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.0:run (default-cli) @ PlanYaChop ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2026-05-07T07:58:09.118+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] com.smartrecipe.SmartRecipeApplication   : Starting SmartRecipeApplication using Java 17.0.18 with PID 25308 (C:\Users\HP\Desktop\PlanYaChop\backend\target\classes started by HP in C:\Users\HP\Desktop\PlanYaChop\backend)
+2026-05-07T07:58:09.122+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] com.smartrecipe.SmartRecipeApplication   : The following 1 profile is active: "development"
+2026-05-07T07:58:09.192+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-07T07:58:09.193+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-07T07:58:10.244+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-07T07:58:10.464+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 210 ms. Found 4 JPA repository interfaces.
+2026-05-07T07:58:11.211+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-05-07T07:58:11.224+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-07T07:58:11.224+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-07T07:58:11.275+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-07T07:58:11.276+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2081 ms
+2026-05-07T07:58:11.304+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-07T07:58:11.493+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:planyachop user=SA
+2026-05-07T07:58:11.496+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-07T07:58:11.505+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:planyachop'
+2026-05-07T07:58:11.614+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-07T07:58:11.709+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-05-07T07:58:11.752+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-07T07:58:12.007+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-07T07:58:12.090+01:00  WARN 25308 --- [smart-recipe-app] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-07T07:58:13.256+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-07T07:58:13.352+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-07T07:58:13.871+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-07T07:58:15.143+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] c.s.s.PreciousCoreRecipeSeedService      : PreciousCore seed completed. Inserted 100 recipes from dataset size 100.
+2026-05-07T07:58:15.165+01:00  WARN 25308 --- [smart-recipe-app] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-07T07:58:15.412+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@11facff9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67429bd2, org.springframework.security.web.context.SecurityContextHolderFilter@63797429, org.springframework.security.web.header.HeaderWriterFilter@31e780b9, org.springframework.web.filter.CorsFilter@207a4f93, org.springframework.security.web.authentication.logout.LogoutFilter@75ad12e0, com.smartrecipe.middleware.JwtAuthenticationFilter@617ad49c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f35a4ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73f0f65a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29645c3e, org.springframework.security.web.session.SessionManagementFilter@1b722ba, org.springframework.security.web.access.ExceptionTranslationFilter@52f48eb1, org.springframework.security.web.access.intercept.AuthorizationFilter@258a689c]
+2026-05-07T07:58:15.680+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-07T07:58:15.726+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-05-07T07:58:15.738+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] com.smartrecipe.SmartRecipeApplication   : Started SmartRecipeApplication in 7.05 seconds (process running for 7.595)
+2026-05-07T07:58:15.843+01:00  INFO 25308 --- [smart-recipe-app] [  restartedMain] com.smartrecipe.SmartRecipeApplication   : Ensured default admin 'admin' (email: admin@planyachop.local). Password reset on startup; change it.

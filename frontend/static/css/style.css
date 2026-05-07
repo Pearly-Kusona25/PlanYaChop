@@ -1714,6 +1714,21 @@ footer {
     filter: brightness(0.92);
 }
 
+.landing-page-v2 .language-toggle .btn {
+    border-color: var(--landing-border);
+    color: var(--landing-muted);
+    background: rgba(20, 20, 20, 0.95);
+    min-width: 76px;
+    font-size: 0.78rem;
+    padding: 0.36rem 0.5rem;
+}
+
+.landing-page-v2 .language-toggle .btn.active {
+    color: #0a0a0a;
+    border-color: var(--landing-accent);
+    background: var(--landing-accent);
+}
+
 .landing-main-v2 {
     padding-bottom: 4rem;
 }
@@ -2197,6 +2212,7 @@ footer {
     .landing-nav-actions {
         width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -2651,7 +2667,11 @@ footer {
 }
 
 .home-page-v2 {
-    background: #f5efe2;
+    background: var(--landing-bg);
+}
+
+.home-page-v3 {
+    background: var(--landing-bg);
 }
 
 .home-metrics {
@@ -2668,11 +2688,11 @@ footer {
 }
 
 .home-meal-card {
-    background: #fffaf0;
-    border: 1px solid #e5d7bf;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.96), rgba(13, 13, 13, 0.96));
+    border: 1px solid var(--landing-border);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 8px 18px rgba(48, 38, 24, 0.08);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
 }
@@ -2693,12 +2713,12 @@ footer {
 .home-meal-card h3 {
     margin: 0 0 0.45rem;
     font-family: "Nunito", "Segoe UI", sans-serif;
-    color: #2f4738;
+    color: var(--landing-text);
     font-size: 1.08rem;
 }
 
 .home-meal-card p {
-    color: #617065;
+    color: var(--landing-muted);
     font-size: 0.9rem;
     line-height: 1.55;
     margin: 0 0 0.65rem;
@@ -2712,12 +2732,12 @@ footer {
 }
 
 .home-meal-meta span {
-    border: 1px solid #e2d5be;
+    border: 1px solid var(--landing-border);
     border-radius: 999px;
     padding: 0.16rem 0.48rem;
-    color: #4b5a4f;
+    color: var(--landing-muted);
     font-size: 0.76rem;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.16);
 }
 
 .home-meal-actions {
@@ -2727,20 +2747,20 @@ footer {
 }
 
 .home-favorite-btn {
-    border: 1px solid #f0a44f;
-    color: #bc6513;
-    background: #fff;
+    border: 1px solid rgba(200, 240, 0, 0.35);
+    color: var(--landing-accent);
+    background: transparent;
 }
 
 .home-favorite-btn:hover {
-    background: #fff1dd;
-    color: #9f520c;
+    background: rgba(200, 240, 0, 0.1);
+    color: var(--landing-accent);
 }
 
 .home-favorite-btn.is-favorite {
-    background: #f28c28;
-    border-color: #f28c28;
-    color: #fff;
+    background: var(--landing-accent);
+    border-color: var(--landing-accent);
+    color: #0a0a0a;
 }
 
 .home-quick-actions {
@@ -2761,14 +2781,14 @@ footer {
     text-decoration: none;
     padding: 0.62rem 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.22);
-    background: rgba(31, 95, 59, 0.95);
-    color: #fff;
+    background: rgba(200, 240, 0, 0.18);
+    color: var(--landing-text);
     box-shadow: 0 10px 24px rgba(13, 33, 22, 0.35);
     font-weight: 700;
 }
 
 .home-quick-action:hover {
-    color: #fff;
+    color: var(--landing-text);
     filter: brightness(0.94);
 }
 
@@ -2805,7 +2825,7 @@ footer {
     background:
         radial-gradient(circle at 4% 18%, rgba(0, 240, 160, 0.09), rgba(0, 0, 0, 0) 32%),
         radial-gradient(circle at 95% 10%, rgba(200, 240, 0, 0.1), rgba(0, 0, 0, 0) 36%),
-        #090909;
+        var(--landing-bg);
 }
 
 .platform-main .landing-section {
@@ -2923,6 +2943,11 @@ footer {
     max-width: 650px;
 }
 
+.dashboard-hero-tools {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .dashboard-v3 .language-toggle .btn {
     border-color: var(--landing-border);
     color: var(--landing-muted);
@@ -2991,6 +3016,26 @@ footer {
     background: #121212;
     border-color: var(--landing-border);
     color: var(--landing-muted);
+}
+
+.platform-table {
+    color: var(--landing-muted);
+    border-color: var(--landing-border);
+    margin: 0;
+}
+
+.platform-table > :not(caption) > * > * {
+    background: transparent;
+    color: inherit;
+    border-bottom-color: var(--landing-border);
+}
+
+.platform-table thead th {
+    color: var(--landing-text);
+    font-family: "Nunito", "Segoe UI", sans-serif;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
 @media (max-width: 1200px) {
@@ -3359,8 +3404,67 @@ html[data-theme="light"] .admin-v3 .admin-control-list .form-select {
 }
 
 html[data-theme="light"] .landing-page-v2 .home-quick-action {
-    background: rgba(57, 93, 74, 0.95);
-    color: #fff;
+    background: rgba(111, 140, 0, 0.12);
+    color: #15231d;
+    border-color: rgba(21, 35, 29, 0.18);
+}
+
+html[data-theme="light"] .landing-page-v2 .landing-links-v2 a,
+html[data-theme="light"] .landing-page-v2 .landing-login-link,
+html[data-theme="light"] .landing-page-v2 .platform-card p,
+html[data-theme="light"] .landing-page-v2 .home-meal-card p,
+html[data-theme="light"] .landing-page-v2 .home-recipe-card p,
+html[data-theme="light"] .landing-page-v2 .dashboard-v3 .recipe-card .text-muted {
+    color: #53635c !important;
+}
+
+html[data-theme="light"] .landing-page-v2 .meal-chatbot-head,
+html[data-theme="light"] .landing-page-v2 .meal-chat-form,
+html[data-theme="light"] .landing-page-v2 .meal-chat-msg-bot,
+html[data-theme="light"] .landing-page-v2 .meal-chat-chip,
+html[data-theme="light"] .landing-page-v2 .meal-chat-form input,
+html[data-theme="light"] .landing-page-v2 .planner-input,
+html[data-theme="light"] .landing-page-v2 .planner-message-ai,
+html[data-theme="light"] .landing-page-v2 .dashboard-v3 .list-group-item {
+    border-color: rgba(21, 35, 29, 0.14);
+}
+
+html[data-theme="light"] .landing-page-v2 .meal-chat-form input::placeholder,
+html[data-theme="light"] .landing-page-v2 .form-control::placeholder {
+    color: #6e7f77;
+}
+
+html[data-theme="light"] .landing-page-v2 .platform-table thead th,
+html[data-theme="light"] .landing-page-v2 .table th,
+html[data-theme="light"] .landing-page-v2 .table td,
+html[data-theme="light"] .landing-page-v2 .meal-recipe-modal-content .modal-title,
+html[data-theme="light"] .landing-page-v2 .meal-recipe-modal-content h6,
+html[data-theme="light"] .landing-page-v2 .recipe-meta-tag,
+html[data-theme="light"] .landing-page-v2 .dashboard-hero-copy h1,
+html[data-theme="light"] .landing-page-v2 .platform-card h2,
+html[data-theme="light"] .landing-page-v2 .platform-card h5 {
+    color: #15231d;
+}
+
+html[data-theme="light"] .landing-page-v2 .platform-table > :not(caption) > * > *,
+html[data-theme="light"] .landing-page-v2 .table > :not(caption) > * > * {
+    border-bottom-color: rgba(21, 35, 29, 0.12);
+}
+
+html[data-theme="light"] .landing-page-v2 .meal-recipe-modal-content .btn-close-white,
+html[data-theme="light"] .landing-page-v2 .meal-login-modal-content .btn-close-white {
+    filter: invert(1) grayscale(100%);
+}
+
+html[data-theme="light"] .landing-page-v2 .dashboard-v3 .language-toggle .btn {
+    background: #ffffff;
+    color: #1f2f28;
+}
+
+html[data-theme="light"] .landing-page-v2 .admin-action-btn-outline,
+html[data-theme="light"] .landing-page-v2 .home-favorite-btn {
+    color: #365749;
+    border-color: rgba(54, 87, 73, 0.25);
 }
 
 html[data-theme="light"] .theme-toggle-btn {

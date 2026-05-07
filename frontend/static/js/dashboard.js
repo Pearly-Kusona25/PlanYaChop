@@ -1,16 +1,24 @@
 let dashboardCache = null;
+let dashboardRecipeModal = null;
+let dashboardChatbot = null;
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     if (!window.location.pathname.includes("/dashboard")) {
         return;
     }
 
-    initDashboard();
+    await initDashboard();
 });
 
 async function initDashboard() {
-    await loadDashboardBaseData();
+    dashboardRecipeModal = window.bootstrap
+        ? new window.bootstrap.Modal(document.getElementById("dashboardRecipeModal"))
+        : null;
+
     bindRequestButtons();
+    bindSavedRecipeClicks();
+    initDashboardChatbot();
+    await loadDashboardBaseData();
 }
 
 async function loadDashboardBaseData() {
@@ -37,11 +45,13 @@ function bindRequestButtons() {
 
     if (mealPlanButton) {
         mealPlanButton.addEventListener("click", async () => {
+            const days = readRequestedDays();
             mealPlanButton.disabled = true;
             mealPlanButton.textContent = "Loading Meal Plan...";
-            const planner = await requestMealPlan();
-            renderPlanner(planner);
+            const planner = await requestMealPlan(days);
+            renderPlanner(planner, days);
             mealPlanButton.textContent = "Meal Plan Requested";
+            mealPlanButton.disabled = false;
         });
     }
 
@@ -52,18 +62,107 @@ function bindRequestButtons() {
             const shopping = await requestShoppingList();
             renderShopping(shopping);
             shoppingButton.textContent = "Shopping List Requested";
+            shoppingButton.disabled = false;
         });
     }
 }
 
-async function ensureDashboardCache() {
-    if (dashboardCache) {
-        return;
-    }
-    await loadDashboardBaseData();
+function bindSavedRecipeClicks() {
+    ["savedRecipesClientGrid", "savedRecipesServerGrid"].forEach((id) => {
+        const grid = document.getElementById(id);
+        if (!grid) {
+            return;
+        }
+        grid.addEventListener("click", async (event) => {
+            const card = event.target.closest("[data-action='open-recipe']");
+            if (!card) {
+                return;
+            }
+            const recipeId = Number(card.getAttribute("data-id"));
+            if (!Number.isFinite(recipeId)) {
+                return;
+            }
+            await openDashboardRecipe(recipeId);
+        });
+    });
 }
 
-async function requestMealPlan() {
+function initDashboardChatbot() {
+    if (!window.PlanYaChopChatbot || typeof window.PlanYaChopChatbot.createChatbot !== "function") {
+        return;
+    }
+
+    dashboardChatbot = window.PlanYaChopChatbot.createChatbot({
+        onMealPlanRequest: async (days) => {
+            const planner = await requestMealPlan(days);
+            renderPlanner(planner, days);
+            return planner;
+        },
+        onShoppingListRequest: async () => {
+            const shopping = await requestShoppingList();
+            renderShopping(shopping);
+            return shopping;
+        }
+    });
+}
+
+async function openDashboardRecipe(id) {
+    try {
+        const response = await fetch(`/api/recipes/${id}`, {
+            method: "GET",
+            headers: buildHeaders()
+        });
+        if (!response.ok) {
+            throw new Error("Failed to load recipe details");
+        }
+        const recipe = await response.json();
+        populateDashboardRecipeModal(recipe);
+        if (dashboardRecipeModal) {
+            dashboardRecipeModal.show();
+        }
+        if (dashboardChatbot && typeof dashboardChatbot.activateForRecipe === "function") {
+            dashboardChatbot.activateForRecipe(recipe);
+        }
+    } catch (error) {
+        console.error("Open recipe error:", error);
+    }
+}
+
+function populateDashboardRecipeModal(recipe) {
+    const title = document.getElementById("dashboardRecipeModalTitle");
+    const summary = document.getElementById("dashboardRecipeSummary");
+    const meta = document.getElementById("dashboardRecipeMeta");
+    const ingredients = document.getElementById("dashboardRecipeIngredients");
+    const steps = document.getElementById("dashboardRecipeSteps");
+
+    if (title) title.textContent = recipe.title || "Meal details";
+    if (summary) summary.textContent = recipe.description || "Recipe details";
+
+    if (meta) {
+        meta.innerHTML = [
+            `Prep: ${recipe.prepTime || 0} mins`,
+            `Cook: ${recipe.cookTime || 0} mins`,
+            `Serves: ${recipe.servings || 0}`,
+            `Cuisine: ${recipe.cuisine || "Cameroonian"}`
+        ].map((entry) => `<span class="recipe-meta-tag">${escapeHtml(entry)}</span>`).join("");
+    }
+
+    if (ingredients) {
+        const items = Array.isArray(recipe.ingredients) ? recipe.ingredients : [];
+        ingredients.innerHTML = items.length
+            ? items.map((item) => `<li>${escapeHtml(formatIngredient(item))}</li>`).join("")
+            : "<li>No ingredients listed.</li>";
+    }
+
+    if (steps) {
+        const items = Array.isArray(recipe.instructions) ? recipe.instructions : [];
+        steps.innerHTML = items.length
+            ? items.map((item) => `<li>${escapeHtml(item.description || "")}</li>`).join("")
+            : "<li>No instructions listed.</li>";
+    }
+}
+
+async function requestMealPlan(days = 7) {
     try {
         const response = await fetch("/api/recipes/meal-plan/request", {
             method: "POST",
@@ -73,7 +172,8 @@ async function requestMealPlan() {
             throw new Error("Meal plan request failed");
         }
         const payload = await response.json();
-        return Array.isArray(payload) ? payload : [];
+        const entries = Array.isArray(payload) ? payload : [];
+        return limitPlanByDays(entries, days);
     } catch (error) {
         console.error("Meal plan request error:", error);
         return [];
@@ -95,6 +195,33 @@ async function requestShoppingList() {
         console.error("Shopping list request error:", error);
         return [];
     }
+}
+
+function limitPlanByDays(entries, days) {
+    const safeDays = Math.min(7, Math.max(1, Number(days) || 7));
+    const allowedDays = [];
+    const output = [];
+
+    entries.forEach((entry) => {
+        const day = entry?.day || "";
+        if (!day) {
+            return;
+        }
+        if (!allowedDays.includes(day) && allowedDays.length < safeDays) {
+            allowedDays.push(day);
+        }
+        if (allowedDays.includes(day)) {
+            output.push(entry);
+        }
+    });
+
+    return output;
+}
+
+function readRequestedDays() {
+    const daysInput = document.getElementById("mealPlanDays");
+    const days = Number(daysInput?.value || 7);
+    return Math.min(7, Math.max(1, Number.isFinite(days) ? days : 7));
 }
 
 function renderSavedRecipes(recipes) {
@@ -121,10 +248,11 @@ function renderSavedRecipes(recipes) {
         const prep = Number(recipe.prepTime || 0);
         const cook = Number(recipe.cookTime || 0);
         const servings = Number(recipe.servings || 0);
+        const recipeId = Number(recipe.id || 0);
 
         return `
             <div class="col-12 col-sm-6 col-lg-4">
-                <div class="card recipe-card h-100">
+                <div class="card recipe-card h-100" data-action="open-recipe" data-id="${recipeId}">
                     <img src="${escapeHtml(recipe.imageUrl || "/images/recipe-placeholder.png")}" class="card-img-top recipe-image" alt="Recipe image">
                     <div class="card-body d-flex flex-column">
                         <div class="d-flex justify-content-between align-items-start mb-2">
@@ -145,22 +273,34 @@ function renderSavedRecipes(recipes) {
     emptyState.classList.add("d-none");
 }
 
-function renderPlanner(entries) {
+function renderPlanner(entries, days = 7) {
     const section = document.getElementById("plannerSection");
-    const list = document.getElementById("plannerList");
-    if (!section || !list) {
+    const tableBody = document.getElementById("plannerTableBody");
+    if (!section || !tableBody) {
         return;
     }
 
     if (!entries.length) {
-        list.innerHTML = '<li class="list-group-item text-muted">No meal plan available yet.</li>';
+        tableBody.innerHTML = `<tr><td colspan="3" class="text-muted">No meal plan available yet.</td></tr>`;
     } else {
-        list.innerHTML = entries.map((entry) =>
-            `<li class="list-group-item d-flex justify-content-between"><span>${escapeHtml(entry.day)}</span><span>${escapeHtml(entry.meal)}</span></li>`
-        ).join("");
+        tableBody.innerHTML = entries.map((entry) => {
+            const meal = String(entry.meal || "");
+            const splitIndex = meal.indexOf(":");
+            const slot = splitIndex > -1 ? meal.slice(0, splitIndex).trim() : "Meal";
+            const recipe = splitIndex > -1 ? meal.slice(splitIndex + 1).trim() : meal;
+
+            return `
+                <tr>
+                    <td>${escapeHtml(entry.day || "")}</td>
+                    <td>${escapeHtml(slot)}</td>
+                    <td>${escapeHtml(recipe)}</td>
+                </tr>
+            `;
+        }).join("");
     }
 
     section.classList.remove("d-none");
+    section.setAttribute("data-days", String(days));
     section.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -184,6 +324,13 @@ function renderShopping(items) {
 
     section.classList.remove("d-none");
     section.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function formatIngredient(item) {
+    if (!item) return "";
+    const quantity = item.quantity ? `${item.quantity} ` : "";
+    const unit = item.unit ? `${item.unit} ` : "";
+    return `${quantity}${unit}${item.name || ""}`.trim();
 }
 
 function buildHeaders() {
